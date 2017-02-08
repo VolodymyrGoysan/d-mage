@@ -1,0 +1,9 @@
+.panel-overflow {
+  height: 100%;
+  margin-bottom: 0;
+
+  &__body {
+    height: calc(100% - 63px);
+    overflow: auto;
+  }
+}

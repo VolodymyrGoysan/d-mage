@@ -1,0 +1,54 @@
+.dicom-editor-panel {
+  height: 100%;
+  // position: absolute;
+  width: 100%;
+  margin-bottom: 0;
+
+  &__heading {
+
+  }
+
+  &__list {
+    margin-bottom: 0;
+  }
+
+  &__body {
+    margin: 5px 2px 10px;
+    max-height: 440px;
+    padding: 0;
+
+    &_overflow {
+      overflow-y: auto;
+      height: calc(100% - 100px);
+    }
+  }
+
+  &__li {
+    border-radius: 0;
+    margin: 0;
+
+    &_selected {
+      border-color: red;
+      border-width: 2px;
+    }
+
+    &:first-child,
+    &:last-child {
+      border-radius: 0;
+    }
+
+    &:hover {
+      border-color: #777;
+      cursor: pointer;
+    }
+  }
+
+  &__list {
+    border: solid 1px #ddd;
+
+    &_overflow {
+      height: 280px;
+      overflow-y: auto;
+    }
+  }
+}

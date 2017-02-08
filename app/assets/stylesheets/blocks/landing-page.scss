@@ -1,0 +1,53 @@
+.landing-page {
+  background: rgba(255, 255, 255, 1);
+  width: 100%;
+
+  &__list-item {
+    padding: 10px;
+  }
+
+  &__uls-row-item {
+    padding: 10px;
+    text-align: left;
+  }
+
+  &__background-image {
+    width: 100%;
+    background: image-url("background-image.jpg");
+  }
+
+  &__background-image-padding {
+    width: 100%;
+    text-align: center;
+    padding-top: 60px;
+  }
+
+  &__background-image-text-heading {
+    color: rgba(230, 230, 230, 1);
+    font-size: 50px;
+  }
+
+  &__background-image-text {
+    color: rgba(230, 230, 230, 1);
+  }
+
+  &__content {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  }
+
+  &__content-row {
+    padding-top: 140px;
+  }
+
+  &__centered-content {
+    text-align: center;
+  }
+
+  &__centered-content-image {
+    max-width: 100%;
+  }
+
+  &__footer {
+    background: rgba(70, 70, 70, 1);
+  }
+}

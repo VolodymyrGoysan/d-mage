@@ -1,0 +1,7 @@
+.col-xs-6.col-sm-4.col-md-2
+  = link_to project, class: 'thumbnail'
+     = image_tag project.prew_image_url
+
+     div.pager.caption
+       h4 = project.name
+       p = project.description

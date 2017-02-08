@@ -1,0 +1,17 @@
+.project-container__left
+  div.panel
+    div.panel-heading
+      = image_tag object.prew_image_url, class: 'img-responsive img-rounded'
+
+    div.panel-body
+      div.btn-group-vertical.left-nav-menu__nav-links role='group' style="width: 100%;"
+
+        = nav_link 'Summary', project_path(object),
+                   { controller: 'projects', action: 'show' }
+
+        - if object.dicom.present?
+          = nav_link 'Attributes', project_project_attributes_path(object),
+                     { controller: 'project_attributes', action: 'index' }
+
+          = nav_link 'Images', project_project_images_path(object),
+                     { controller: 'project_images', action: 'index' }

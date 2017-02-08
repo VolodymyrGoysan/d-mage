@@ -1,0 +1,12 @@
+.panel-draggable {
+  max-width: 200px;
+  position: absolute;
+
+  &__heading {
+    padding: 3px;
+  }
+
+  &__body {
+    padding: 3px;
+  }
+}

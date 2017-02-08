@@ -1,0 +1,56 @@
+.project-container__right
+  .panel.panel-overflow
+    .panel-heading
+      .row
+        .col-md-12
+          .pull-left
+            h3.row-no-margin Summary
+          .btn-toolbar.pull-right
+              = link_to 'Download', project_path(@project, format: :dcm),
+                                    class: 'btn btn-default btn-sm'
+
+              = sm_btn 'pencil-square-o', 'Edit', edit_project_path(@project),
+                        controller: 'projects', action: 'edit', type: 'warning',
+                        title: 'Edit project'
+
+    .panel-body.panel-overflow__body.scrollbar-os-x
+      table class="table table-hover table-condensed table-no-margin"
+        tr.row
+          td.col-xs-6.col-md-3 Name:
+          td.col-xs-6.col-md-9 = @project.name
+        tr.row
+          td.col-xs-6.col-md-3 Accessibility:
+          td.col-xs-6.col-md-9 = @project.accessibility
+        tr.row
+          td.col-xs-6.col-md-3 Images count:
+          td.col-xs-6.col-md-9 = @project.dicom.images.count
+        tr.row
+          td.col-xs-6.col-md-3 Pixel spacing:
+          td.col-xs-6.col-md-9 = @project.dicom.pixel_spacing
+        tr.row
+          td.col-xs-6.col-md-3 Slice thickness:
+          td.col-xs-6.col-md-9 = @project.dicom.slice_thickness
+        tr.row
+          td.col-xs-6.col-md-3 width
+          td.col-xs-6.col-md-9 = @project.dicom.images.first.width || none
+        tr.row
+          td.col-xs-6.col-md-3 height
+          td.col-xs-6.col-md-9 = @project.dicom.images.first.height || none
+        tr.row
+          td.col-xs-6.col-md-3 Patient's Name:
+          td.col-xs-6.col-md-9 = @tags["Patient's Name"] || 'Anonyme'
+        tr.row
+          td.col-xs-6.col-md-3 Patient ID:
+          td.col-xs-6.col-md-9 = @tags['Patient ID'] || 1
+        tr.row
+          td.col-xs-6.col-md-3 Patient's Birth Date:
+          td.col-xs-6.col-md-9 = @tags["Patient's Birth Date"] || 'XXXX_XX_XX'
+        tr.row
+          td.col-xs-6.col-md-3 Bit Depth:
+          td.col-xs-6.col-md-9 = @tags['Bits Allocated'] || 8
+        tr.row
+          td.col-xs-6.col-md-3 Photometric Interpretation:
+          td.col-xs-6.col-md-9 = @tags['Photometric Interpretation'] || 'hiden'
+        tr.row
+          td.col-xs-6.col-md-3 Description:
+          td.col-xs-6.col-md-9 = @project.description

@@ -1,0 +1,19 @@
+.select-component {
+   border: 1px solid #ccc;
+   width: 70px;
+   border-radius: 3px;
+
+  & select {
+     padding: 5px 8px;
+     width: 130%;
+     border: none;
+     box-shadow: none;
+     background: transparent;
+     background-image: none;
+     -webkit-appearance: none;
+  }
+
+  & select:focus {
+     outline: none;
+  }
+}

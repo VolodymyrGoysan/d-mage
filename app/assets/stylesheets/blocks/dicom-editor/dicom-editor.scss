@@ -1,0 +1,16 @@
+.dicom-editor {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+
+  &__container {
+    height: 100%;
+    position: relative;
+  }
+
+  &__body {
+    height: calc(100% - 43px);
+    padding: 0;
+  }
+}

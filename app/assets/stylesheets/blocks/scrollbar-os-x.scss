@@ -1,0 +1,25 @@
+.scrollbar-os-x {
+  border: 0;
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px $scrollbar-os-x-thumb-box-shadow-color;
+  	border-radius: 10px;
+  	background-color: $scrollbar-os-x-track-color;
+  }
+
+  &::-webkit-scrollbar {
+  	width: 10px;
+    height: 10px;
+  	background-color: $scrollbar-os-x-background-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+  	border-radius: 10px;
+  	-webkit-box-shadow: inset 0 0 6px $scrollbar-os-x-thumb-box-shadow-color;
+  	background-color: $scrollbar-os-x-thumb-color;
+
+    &:hover {
+      -webkit-box-shadow: inset 0 0 6px $scrollbar-os-x-thumb-box-shadow-hover-color;
+    }
+  }
+}

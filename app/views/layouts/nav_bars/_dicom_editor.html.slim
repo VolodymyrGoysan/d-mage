@@ -1,0 +1,16 @@
+.navbar.navbar-inverse.navbar-no-paddings
+  .navbar-header
+    button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"
+      span.sr-only Toggle navigation
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+
+    = link_to fa_icon('arrow-left', text: 'to project'),
+              project_project_images_path(object),
+              class: 'navbar-brand'
+
+  div class="collapse navbar-collapse" aria-expanded="false"
+
+    ul class="nav navbar-nav navbar-right"
+      = render 'layouts/nav_bars/nested/user_dropdown'

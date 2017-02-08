@@ -1,0 +1,23 @@
+li = link_to 'Register', new_user_registration_path
+li.dropdown
+
+  a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+    = fa_icon('caret-down', text: 'Sign in', right: true)
+
+  ul.dropdown-menu.sign-in-dropdown
+    li
+      = simple_form_for User.new, url: new_user_session_path,
+                                  wrapper: :dropdown_sign_in do |f|
+
+        = f.input :email, autofocus: true, label: false, placeholder: 'Email'
+
+        = f.input :password, autocomplete: 'off', label: false,
+                             placeholder: 'Password'
+
+        .sign-in-dropdown__form-group
+          = f.input :remember_me, as: :boolean, inline_label: ' Remember me'
+
+        .sign-in-dropdown__form-group
+          = link_to "Forgot your password? ", new_password_path(User.new)
+
+          = f.submit 'Log in', class: 'btn btn-success btn-sm pull-right'

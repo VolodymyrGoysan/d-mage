@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title DMage
+
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+  body class='container-fluid container-fluid-no-paddings'
+    = render 'layouts/nav_bars/dicom_editor'
+
+    div class='content-container'
+      = yield

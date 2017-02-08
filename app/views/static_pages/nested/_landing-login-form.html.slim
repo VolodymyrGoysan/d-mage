@@ -1,0 +1,29 @@
+.landing-page__background-image
+  .row.row-no-margin
+    .col-md-6
+      .landing-page__background-image-padding
+        h1.landing-page__background-image-text-heading
+          | D-mage
+        h1.landing-page__background-image-text
+          | Online DICOM Editor
+        h2.landing-page__background-image-text
+          | Join us for free
+    .col-md-6
+      .row.pager
+        .col-md-6.col-md-offset-3.form-group
+          h1.landing-page__background-image-text-heading Log in
+
+          = simple_form_for User.new, url: new_user_session_path do |f|
+              = f.input :email, autofocus: true, label: false,
+                                placeholder: 'Email', class: 'form-control'
+
+              = f.input :password, autocomplete: 'off', label: false,
+                                   placeholder: 'Password', class: 'form-control'
+
+              = f.input :remember_me, as: :boolean, inline_label: ' Remember me'
+
+              = f.submit 'Log in', class: 'btn btn-success btn-lg'
+
+              p.landing-page__background-image-text or
+              = link_to 'Register', new_user_registration_path,
+                                    class: 'btn btn-default'

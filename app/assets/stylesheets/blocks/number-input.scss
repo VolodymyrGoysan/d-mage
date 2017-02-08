@@ -1,0 +1,18 @@
+.number-input {
+    border: none;
+    text-align: center;
+    padding: 2px;
+    margin-bottom: 10px;
+
+  &:hover {
+    cursor: pointer;
+    background: rgb(240, 240, 240);
+    box-shadow: inset 0 0 1px 1px rgb(230, 230, 230);
+  }
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button, {
+    cursor: pointer;
+    background: rgb(240, 240, 240);
+  }
+}

@@ -1,0 +1,13 @@
+.project-container {
+  &__left {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  &__right {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    height: calc(100% - 22px);
+  }
+}

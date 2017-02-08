@@ -1,0 +1,10 @@
+#search {
+  width: 150px;
+  float: right;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+
+  &:focus {
+    width: 100%;
+  }
+}

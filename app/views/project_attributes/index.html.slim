@@ -1,0 +1,37 @@
+.project-container__right
+  .panel.panel-overflow
+    .panel-heading
+      .row
+        .col-md-12
+          .pull-left
+            h3.row-no-margin Attributes
+          .btn-toolbar.pull-right
+              input { type="text" id="search" placeholder="Search"
+                      class="form-control"}
+
+    div.panel-body.panel-overflow__body.scrollbar-os-x
+      table class="table table-hover table-condensed table-no-margin"
+        - index = 0
+        - @tags.each do |key, value|
+          - index += 1000
+          tr.row
+            - if value
+              td.col-xs-6.col-md-3 = key
+
+              - if (value.class == Hash)
+                td.col-xs-6.col-md-9
+
+                  div (data-toggle='collapse'
+                       data-target="##{index}"
+                       aria-expanded=false
+                       controls="#{index}"
+                       class="collapsable-item
+                              collapsable-item__inner
+                              collapsed")
+                    = key
+
+                  div.collapse id="#{index}"
+                    ul.ul-no-margin = nested_nodes(value, index)
+
+              - else
+                td.col-xs-6.col-md-9 = value

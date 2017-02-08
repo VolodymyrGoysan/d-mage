@@ -1,0 +1,201 @@
+.landing-page.scrollbar-os-x.landing-overflow
+  - if !(user_signed_in?)
+    = render './static_pages/nested/landing-login-form.html'
+
+  .landing-page__content
+
+    .row.row-no-margin.landing-page__content-row
+      .col-md-8.col-md-offset-2
+        h2 Quick overview
+        .landing-page__list-item
+          | D-mage is free online DICOM editor, that allows you to store dicom
+          | files that you are interested in
+          | and access to it from anywhere in the world where there is Internet.
+        .landing-page__list-item
+          | You can view all entire DICOM attributes, and images in the viewer.
+        .landing-page__list-item
+          | With D-mage you can feel completely free, without fear to forget or
+          | lose any important data.
+        .landing-page__list-item
+          | Edit images with a set of included filters and instruments, such as:
+        .row.landing-page__uls-row-item
+          ul.col-md-2.col-md-offset-1
+            li Brightness
+            li Colors invertion
+            li Contrast
+            li Convolution
+            li Edge detection
+            li Embossing
+          ul.col-md-2.col-md-offset-1
+            li Gamma correction
+            li Gauss difference
+            li Highlighting
+            li Laplace filter
+            li Noise
+            li Pixelation
+          ul.col-md-2.col-md-offset-1
+            li Posterization
+            li Region growing
+            li Sepia
+            li Sharpening
+            li Temperature
+            li Colored thresholding
+          ul.col-md-2.col-md-offset-1
+            li Thresholding
+            li Solarizing
+            li Grayscale
+            li Sobel filter
+            li Gaussian blur
+
+    .landing-page__centered-content
+      .row.row-no-margin.landing-page__content-row
+        = image_tag('editor-preview.png', class: 'landing-page__centered-content-image')
+
+    .row.row-no-margin.landing-page__content-row
+      .col-md-6
+        .row
+          .col-md-8.col-md-offset-4
+            h2 Minimum hardware requirements
+      .col-md-6
+        .row
+          .col-md-8.col-md-offset-2
+            ul
+              li.landing-page__list-item
+                span 32-bit processor (Intel Pentium 4 or superior)
+              li.landing-page__list-item
+                span 2 GB of RAM memory
+              li.landing-page__list-item
+                span Chromium 44 browser (or equivalent Mozila, Opera of Safari)
+              li.landing-page__list-item
+                span optional: touch-enabled display
+
+    .landing-page__centered-content
+      .row.row-no-margin.landing-page__content-row
+        = image_tag('editor.png', class: 'landing-page__centered-content-image')
+
+    .row.row-no-margin.landing-page__content-row
+      .col-md-6
+        .row
+          .col-md-8.col-md-offset-4
+            h2 Devices
+      .col-md-6
+        .row
+          .col-md-8.col-md-offset-2
+            ul
+              li.landing-page__list-item
+                span Comfortable usage of editor requires screen with resolution
+                | 1280 x 720 or higher
+              li.landing-page__list-item
+                span Editor bases on bootstrap block system, which provide an
+                | ability to use it on any desktop or mobile devise
+              li.landing-page__list-item
+                span No specific operation system required, it is suitable for
+                | Android, iOS, Windows, Linux and others
+
+    .landing-page__centered-content
+      .row.row-no-margin.landing-page__content-row
+        = image_tag('devicesfull.png', class: 'landing-page__centered-content-image')
+
+    .row.row-no-margin.landing-page__content-row
+      .col-md-6
+        .row
+          .col-md-8.col-md-offset-4
+            h2 Interface
+      .col-md-6
+        .row
+          .col-md-8.col-md-offset-2
+            ul
+              li.landing-page__list-item
+                span Intuitive interface: simple and beautiful, created specialy
+                | for maximal comfort user interaction with service.
+              li.landing-page__list-item
+                span Context menus - functionalities and resources are presented
+                | only by demand, keeping the interface always clean and
+                | understandable through all the user experience.
+
+    .landing-page__centered-content.row-no-margin
+      .row.row-no-margin.landing-page__content-row
+        = image_tag('interface.png', class: 'landing-page__centered-content-image')
+
+    .row.row-no-margin.landing-page__content-row
+      .col-md-6
+        .row
+          .col-md-8.col-md-offset-4
+            h2 Development tools
+
+    .row-no-margin.landing-page__content-row
+      .row.row-no-margin
+        .col-md-6
+          .row
+            .col-md-6.col-md-offset-6
+              = image_tag('rails.png', class: 'image-responcive logo-image')
+        .col-md-6
+          .row
+            .col-md-10
+              h4 Ruby on Rails v.5.0.1
+              div Ruby on Rails, or simply Rails, is a server-side web application
+              | framework written in Ruby under the MIT License. Rails is a
+              | model–view–controller (MVC) framework, providing default
+              | structures for a database, a web service, and web pages. It
+              | encourages and facilitates the use of web standards such as JSON
+              | or XML for data transfer, and HTML, CSS and JavaScript for
+              | display and user interfacing. In addition to MVC, Rails
+              | emphasizes the use of other well-known software engineering
+              | patterns and paradigms, including convention over configuration
+              | (CoC), don't repeat yourself (DRY), and the active record pattern.
+
+      br
+
+      .row.row-no-margin
+        .col-md-6
+          .row
+            .col-md-6.col-md-offset-6
+              = image_tag('react_logo.png', class: 'image-responcive logo-image')
+        .col-md-6
+          .row
+            .col-md-10
+              h4 React on ES6+
+              div React is a JavaScript library for building user interfaces.
+              | It makes painless to create interactive UIs. Declarative views
+              | make code more predictable, simpler to understand, and easier
+              | to debug. Reack create encapsulated components that manage their
+              | own state, then it composing them to make complex UIs.
+              | React can also render on the server using Node and power mobile
+              | apps using React Native.
+
+      br
+
+      .row.row-no-margin
+        .col-md-6
+          .row
+            .col-md-8.col-md-offset-6
+              = image_tag('postgresql.png', class: 'image-responcive logo-image')
+        .col-md-6
+          .row
+            .col-md-10
+              h4 PostgreSQL v.9.6
+              div PostgreSQL, often simply Postgres, is an object-relational
+              | database (ORDBMS) – i.e. a RDBMS, with additional (optional use)
+              | "object" features – with an emphasis on extensibility and
+              | standards compliance. As a database server, its primary function
+              | is to store data securely, and to allow for retrieval at the
+              | request of other software applications. It can handle workloads
+              | ranging from small single-machine applications to large
+              | Internet-facing applications (or for data warehousing) with many
+              | concurrent users; on macOS, PostgreSQL is the default database –
+              | for web hosting[10][11][12] – and it is also available for
+              | Microsoft Windows and Linux (supplied in most distributions).
+
+      .row-no-margin.landing-page__content-row
+
+    .landing-page__footer
+      .landing-page__centered-content
+        .landing-page__list-item
+          br
+          p.landing-page__background-image-text National Technical University of Ukraine "Kyiv Polytechnic Institute"
+          p.landing-page__background-image-text Department of Biomedical Engineering
+          br
+          p.landing-page__background-image-text Made by students: Zabolotnyi D.G. and Hoisan V.Y.
+        .landing-page__list-item
+          hr
+          p.landing-page__background-image-text Copyright © 2017 D-mage Inc. Privacy Policy

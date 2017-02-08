@@ -1,0 +1,38 @@
+.flash_messages .alert{
+  margin-bottom: 0;
+  position: fixed;
+  top: 40px;
+  left: 20%;
+  right: 20%;
+
+  -moz-animation: fade 2s ease-in 3s forwards, marg 3s 3.8s forwards;
+  -webkit-animation: fade 2s ease-in 3s forwards, marg 3s 3.8s forwards;
+  -o-animation: fade 2s ease-in 3s forwards, marg 3s 3.8s forwards;
+  animation: fade 2s ease-in 3s forwards, marg 3s 3.8s forwards;
+}
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes marg {
+  to {
+    margin-top: -100px;
+  }
+}
+@-webkit-keyframes marg {
+  to {
+    margin-top: -100px;
+  }
+}

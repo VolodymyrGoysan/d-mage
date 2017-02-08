@@ -1,0 +1,20 @@
+.navbar.navbar-default.navbar-no-paddings
+  .navbar-header
+    button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false"
+      span.sr-only Toggle navigation
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+
+    = link_to "D-mage", root_path, class: "navbar-brand"
+
+  div class="collapse navbar-collapse" id="navbar-collapse-1"
+
+    ul class="nav navbar-nav"
+      li = link_to 'Projects', projects_path
+
+    ul class="nav navbar-nav navbar-right"
+      - if user_signed_in?
+        = render 'layouts/nav_bars/nested/user_dropdown'
+      - else
+        = render 'layouts/nav_bars/nested/sign_in_dropdown'

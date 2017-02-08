@@ -1,0 +1,15 @@
+.project-container__right
+  .panel.panel-overflow
+    .panel-heading
+      .row
+        .col-sm-12
+          .pull-left
+            h3.row-no-margin Images
+          .btn-toolbar.pull-right
+            = sm_btn 'paint-brush', 'Editor',
+                     edit_project_project_dicom_path(@project, @project.dicom),
+                     type: 'info', title: 'To image editor'
+
+    .panel-body.panel-overflow__body.scrollbar-os-x
+      .panel-body-margin
+        = react_component 'Components.ProjectImages', images: @images

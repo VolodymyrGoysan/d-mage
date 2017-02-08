@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title DMage
+
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+  body class='container-fluid container-fluid-no-paddings'
+    = render "layouts/nav_bars/application"
+
+    div class='content-container'
+      div class='left-nav-menu'
+
+        = render "layouts/nav_menues/#{object.model_name.singular}",
+                 object: object
+
+      div class='nav-menu-right-side-container'
+        = yield

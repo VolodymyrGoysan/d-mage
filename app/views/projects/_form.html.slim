@@ -1,0 +1,15 @@
+= simple_form_for project,
+                  wrapper: :horizontal_form,
+                  wrapper_mappings: { file: :horizontal_file_input },
+                  html: { class: 'form-horizontal' } do |f|
+  = f.input :name
+
+  = f.input :accessibility, collection: Project::ACCESSABILITY_TYPES
+
+  = f.simple_fields_for :dicom_attributes do |nf|
+    = nf.input :file, as: :file
+
+  = f.input :description, as: :text
+
+  .form-actions.col-sm-offset-3
+    = f.button :submit, class: 'btn btn-sm btn-success'
